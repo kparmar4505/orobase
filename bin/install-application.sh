@@ -67,7 +67,7 @@ git-archive-all $(find . -name ".*" -size 0  | while read -r line; do printf '%s
 tar -xf /tmp/source.tar --strip-components=1 -C ${APP_DIR}
 
 # Fix for wrong file system check
-sed -i -e "s/return \$fileLength == 255;/return \$fileLength > 200;/g" ${APP_DIR}/app/OroRequirements.php
+#sed -i -e "s/return \$fileLength == 255;/return \$fileLength > 200;/g" ${APP_DIR}/app/OroRequirements.php
 
 # If is composer application
 if [[ -f ${APP_DIR}/composer.json ]]; then
